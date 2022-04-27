@@ -21,7 +21,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
     $router->get('arena', ['uses' => 'ArenaController@showAllArena']);
 
-    $router->get('arena/{id}', ['uses' => 'ArenaController@showOneArena']);
+    $router->get('arena/{id}', ['uses' => 'ArenaController@showOneArenas']);
 
     $router->post('arena', ['uses' => 'ArenaController@create']);
 

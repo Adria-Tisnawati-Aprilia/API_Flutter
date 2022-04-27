@@ -9,16 +9,16 @@ use Illuminate\Http\Response;
 
 class ArenaController extends Controller {
 
-    public function showAllArenas()
+    public function showAllArena()
     : JsonResponse {
 
         return response()->json(Arena::all());
     }
 
-    public function showOneArenas()
+    public function showOneArenas($id)
     : JsonResponse{
 
-        return response()->json(Arena::find($id));
+        return response()->json(Arena::where("kode_arena", $id)->first());
     }
 
     public function create(Request $request)
@@ -40,7 +40,7 @@ class ArenaController extends Controller {
 
     public function delete($id) {
 
-        Arena::findOrFail($id)->delete();
+        Arena::where("kode_arena", $id)->delete();
 
         return response('Deleted Successfuly', Response::HTTP_OK);
     }

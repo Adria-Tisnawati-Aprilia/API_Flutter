@@ -5,9 +5,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Arena extends Model {
-    protected $table = "arena";
-    protected $guarded = [''];
+class Lapangan extends Model {
+    protected $table = "event";
+    protected $guarded = [];
 
 
     protected $hidden = [];
