@@ -5,7 +5,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Lapangan extends Model {
+class Event extends Model {
     protected $table = "event";
     protected $guarded = [];
 

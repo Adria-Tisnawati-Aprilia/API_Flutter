@@ -41,4 +41,17 @@ $router->group(['prefix' => 'api'], function () use ($router) {*/
     $router->delete('lapangan/{id}', ['uses' => 'LapanganController@delete']);
 
     $router->put('lapangan/{id}', ['uses' => 'LapanganController@update']);
+/*});
+
+$router->group(['prefix' => 'api'], function () use ($router) {*/
+
+    $router->get('event', ['uses' => 'EventController@showAllEvent']);
+
+    $router->get('event/{id}', ['uses' => 'EventController@showOneEvent']);
+
+    $router->post('event', ['uses' => 'EventController@create']);
+
+    $router->delete('event/{id}', ['uses' => 'EventController@delete']);
+
+    $router->put('event/{id}', ['uses' => 'EventController@update']);
 });
