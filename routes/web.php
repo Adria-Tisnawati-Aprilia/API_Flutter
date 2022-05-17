@@ -54,4 +54,17 @@ $router->group(['prefix' => 'api'], function () use ($router) {*/
     $router->delete('event/{id}', ['uses' => 'EventController@delete']);
 
     $router->put('event/{id}', ['uses' => 'EventController@update']);
+/*});
+
+$router->group(['prefix' => 'api'], function () use ($router) {*/
+
+$router->get('jadwal', ['uses' => 'JadwalController@showAllEvent']);
+
+$router->get('jadwal/{id}', ['uses' => 'JadwalController@showOneEvent']);
+
+$router->post('jadwal', ['uses' => 'JadwalController@create']);
+
+$router->delete('jadwal/{id}', ['uses' => 'JadwalController@delete']);
+
+$router->put('jadwal/{id}', ['uses' => 'JadwalController@update']);
 });
