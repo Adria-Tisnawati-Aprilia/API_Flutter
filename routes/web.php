@@ -67,4 +67,17 @@ $router->post('jadwal', ['uses' => 'JadwalController@create']);
 $router->delete('jadwal/{id}', ['uses' => 'JadwalController@delete']);
 
 $router->put('jadwal/{id}', ['uses' => 'JadwalController@update']);
-});
+/*});
+
+$router->group(['prefix' => 'api'], function () use ($router) {*/
+
+    $router->get('booking', ['uses' => 'BookingController@showAllEvent']);
+
+    $router->get('booking/{id}', ['uses' => 'BookingController@showOneEvent']);
+
+    $router->post('booking', ['uses' => 'BookingController@create']);
+
+    $router->delete('booking/{id}', ['uses' => 'BookingController@delete']);
+
+    $router->put('booking/{id}', ['uses' => 'BookingController@update']);
+    });

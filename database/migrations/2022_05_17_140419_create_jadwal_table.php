@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('jadwal', function (Blueprint $table) {
+            $table->string('kode_jadwal');
             $table->string('kode_arena');
             $table->dateTime('play_date_start');
             $table->dateTime('play_date_end');
