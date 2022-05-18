@@ -58,15 +58,15 @@ $router->group(['prefix' => 'api'], function () use ($router) {*/
 
 $router->group(['prefix' => 'api'], function () use ($router) {*/
 
-$router->get('jadwal', ['uses' => 'JadwalController@showAllEvent']);
+    $router->get('jadwal', ['uses' => 'JadwalController@showAllEvent']);
 
-$router->get('jadwal/{id}', ['uses' => 'JadwalController@showOneEvent']);
+    $router->get('jadwal/{id}', ['uses' => 'JadwalController@showOneEvent']);
 
-$router->post('jadwal', ['uses' => 'JadwalController@create']);
+    $router->post('jadwal', ['uses' => 'JadwalController@create']);
 
-$router->delete('jadwal/{id}', ['uses' => 'JadwalController@delete']);
+    $router->delete('jadwal/{id}', ['uses' => 'JadwalController@delete']);
 
-$router->put('jadwal/{id}', ['uses' => 'JadwalController@update']);
+    $router->put('jadwal/{id}', ['uses' => 'JadwalController@update']);
 /*});
 
 $router->group(['prefix' => 'api'], function () use ($router) {*/
@@ -80,4 +80,17 @@ $router->group(['prefix' => 'api'], function () use ($router) {*/
     $router->delete('booking/{id}', ['uses' => 'BookingController@delete']);
 
     $router->put('booking/{id}', ['uses' => 'BookingController@update']);
+/*});
+
+$router->group(['prefix' => 'api'], function () use ($router) {*/
+
+    $router->get('transaksi', ['uses' => 'TransaksiController@showAllEvent']);
+
+    $router->get('transaksi/{id}', ['uses' => 'TransaksiController@showOneEvent']);
+
+    $router->post('transaksi', ['uses' => 'TransaksiController@create']);
+
+    $router->delete('transaksi/{id}', ['uses' => 'TransaksiController@delete']);
+
+    $router->put('transaksi/{id}', ['uses' => 'TransaksiController@update']);
     });
